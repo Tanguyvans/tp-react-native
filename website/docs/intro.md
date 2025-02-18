@@ -2,46 +2,27 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# React Native Workshop
 
-Let's discover **Docusaurus in less than 5 minutes**.
+## Workshop Structure
 
-## Getting Started
+This workshop is divided into progressive exercises:
 
-Get started by **creating a new site**.
+1. **Exercise 1**: Creating Your First App
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+   - Learn to set up a React Native project
+   - Understand basic components
+   - Create a simple UI
 
-### What you'll need
+2. **Exercise 2**: Navigation (builds on Exercise 1)
+   - Starting code provided in exercises/exercise-2
+   - Add multiple screens
+   - Implement navigation
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+[Additional exercises...]
 
-## Generate a new site
+## How to Follow This Workshop
 
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+1. Start with Exercise 1 by creating your own project
+2. For subsequent exercises, use the provided starter code in the exercises directory
+3. Each exercise builds upon the concepts learned in previous exercises
