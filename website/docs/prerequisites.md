@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Prerequisites
 
-Before starting this workshop, ensure you have the following tools and software installed on your machine.
+Before getting into the exercises, ensure you have the following tools and software installed on your machine.
 
 ## Required Software
 
@@ -17,17 +17,17 @@ Before starting this workshop, ensure you have the following tools and software 
 node -v
 ```
 
-### Code Editor
+If you don't have Node.js installed, you can download it from [here](https://nodejs.org/fr/download). I recommend installing using nvm. nvm is a tool that allows you to install and manage different versions of Node.js. For this workshop, we will use Node.js 22.14.0.
 
-- Install [Visual Studio Code](https://code.visualstudio.com/) (recommended)
-- Recommended extensions:
-  - React Native Tools
-  - ESLint
-  - Prettier
+If you already have nvm installed, you can install with:
+
+```bash
+nvm install 22.14.0
+```
 
 ### Git
 
-- Install [Git](https://git-scm.com/)
+- Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - Verify installation:
 
 ```bash
@@ -36,10 +36,4 @@ git --version
 
 ### React Native Development Environment
 
-#### For Android Development
-
-1. Install [Android Studio](https://developer.android.com/studio)
-2. Install Android SDK (through Android Studio)
-3. Configure environment variables:
-   - ANDROID_HOME
-   - Add platform-tools to PATH
+Depending on your OS, you will need to install different tools. Follow the instructions [here](https://docs.expo.dev/get-started/set-up-your-environment/).

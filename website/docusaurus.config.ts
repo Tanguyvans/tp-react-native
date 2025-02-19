@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'TP React Native',
+  tagline: 'react native workshop',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -39,8 +39,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/tanguyvans/tp-react-native',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -50,12 +49,10 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'TP React Native',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Polytechnique Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -66,7 +63,7 @@ const config: Config = {
           label: 'Tutorial',
         },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/FasterAI-Labs/fasterai',
           label: 'GitHub',
           position: 'right',
         },
