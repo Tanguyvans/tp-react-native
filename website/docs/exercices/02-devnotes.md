@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-title: "Exercise 2: DevNotes"
+title: "Exercice 2: DevNotes"
 ---
 
 # DevNotes

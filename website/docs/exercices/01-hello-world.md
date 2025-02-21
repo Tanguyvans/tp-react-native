@@ -1,54 +1,59 @@
 ---
 sidebar_position: 3
-title: "Exercise 1: Hello World"
+title: "Exercice 1 : Hello World"
 ---
 
 # Hello World
 
-In this first exercise, you'll build an app that introduces core concepts through a simple counter app. We'll start by creating a structured layout with a header and main content area. Then, we'll add styled text components and implement interactive buttons with visual feedback. Throughout the exercise, we'll apply professional styling to create a polished user interface.
+## 🎯 Objectifs
 
-Here's what your final app will look like:
+Dans ce premier exercice, vous apprendrez à :
+
+| Compétence   | Description                                                                |
+| ------------ | -------------------------------------------------------------------------- |
+| 📱 Interface | Créer une interface utilisateur structurée avec en-tête et zone de contenu |
+| 🔄 État      | Gérer l'état local avec useState pour un compteur interactif               |
+| 💅 Style     | Appliquer des styles professionnels et créer des composants réutilisables  |
+| 🎨 Design    | Implémenter des retours visuels et des animations de pression              |
+
+Voici à quoi ressemblera votre application finale :
 
 <div align="center">
   <img
-    src={require('/img/01-app.png').default}
-    alt="Hello World App"
+    src={require('@site/static/img/01-app.png').default}
+    alt="Application Hello World"
     width={300}
     style={{ margin: '20px 0' }}
   />
 </div>
 
-## Step 1: run the project
+## 📋 Étape 1 : Lancer le projet
 
-First, navigate to the exercise directory and install the dependencies:
+Commencez par naviguer vers le dossier de l'exercice et installer les dépendances :
 
 ```bash
 cd exercises/01-hello-world
 npm install
 ```
 
-Then, run the project:
+Puis lancez le projet :
 
 ```bash
 npx expo start
 ```
 
-You'll see several options to run your app:
-
-- Press `w` to run in web browser
-- Press `a` to run on Android emulator
-- Press `i` to run on iOS simulator
-- Scan QR code with Expo Go app on your phone
-
-If you have connection issues, try running with tunnel:
+:::info
+Si vous rencontrez des problèmes de connexion, essayez de lancer le projet avec le tunnel :
 
 ```bash
 npx expo start --tunnel
 ```
 
-## Step 2: Create Hello-World page
+:::
 
-Your project is running, but it is empty. Let's add a simple page with a text component. Go to the `app/index.tsx` file and add the following code:
+## 📱 Étape 2 : Créer la page Hello World
+
+Votre projet tourne, mais il est vide. Ajoutons une page simple avec un composant texte. Allez dans le fichier `app/index.tsx` et ajoutez le code suivant :
 
 ```tsx
 import { StyleSheet, Text, View } from "react-native";
@@ -62,18 +67,18 @@ export default function Page() {
 }
 ```
 
-## Step 3: Add a counter
+## 🔄 Étape 3 : Ajouter un compteur
 
-Let's add interactivity to our app with a counter. We'll use React's `useState` hook to manage the counter state. The `useState` hook lets us track values that can change over time.
+Ajoutons de l'interactivité à notre application avec un compteur. Nous utiliserons le hook `useState` pour gérer l'état du compteur. Le hook `useState` permet de suivre les valeurs qui peuvent changer au fil du temps.
 
-First, import the useState hook and add it to your component:
+Importez le hook `useState` et ajoutez-le à votre composant :
 
 ```tsx
 import { StyleSheet, Text, View, Pressable, SafeAreaView } from "react-native";
 import { useState } from "react";
 ```
 
-Wrap your main content with `SafeAreaView`:
+Ajoutez un composant `SafeAreaView` pour éviter que le contenu soit masqué par les trous noirs :
 
 ```tsx
 export default function Page() {
@@ -89,52 +94,38 @@ export default function Page() {
 }
 ```
 
-<div style={{ 
-  padding: '20px', 
-  background: 'var(--ifm-background-surface-color)', 
-  border: '1px solid var(--ifm-color-emphasis-300)',
-  borderRadius: '8px',
-  marginTop: '24px',
-  marginBottom: '24px',
-  boxShadow: '0 2px 4px rgba(0,0,0,0.05)'
-}}>
+:::info
 
-### 📱 Why SafeAreaView?
+`SafeAreaView` automatiquement ajoute un padding pour éviter que le contenu soit masqué par :
 
-`SafeAreaView` automatically adds padding to prevent content from being hidden by:
+- Les trous noirs sur les iPhones
+- Les coins arrondis
 
-- iPhone notches
-- Rounded corners
+:::
 
-</div>
-
-Now that we have a count variable, we can use it in the `Text` component.
+Maintenant que nous avons une variable `count`, nous pouvons l'utiliser dans le composant `Text` :
 
 ```tsx
 <Text>{count}</Text>
 ```
 
-Next, let's create buttons to control the counter. We'll use `Pressable` instead of the basic `Button` component because it offers better styling options and press feedback:
+Maintenant, créons des boutons pour contrôler le compteur. Nous utiliserons `Pressable` au lieu du composant `Button` de base car il offre de meilleures options de style et de retour visuel :
 
 ```tsx
 <View>
   <Pressable onPress={() => setCount(count + 1)}>
     <Text>Increment</Text>
   </Pressable>
-  <Pressable onPress={() => setCount(count - 1)}>
-    <Text>Decrement</Text>
-  </Pressable>
 </View>
 ```
+
+Il est possible d'utiliser le composant `Button` de base, mais il ne permet pas de personnaliser les styles et les retours visuels :
 
 ```tsx
 <View>
   <Button title="Increment" onPress={() => setCount(count + 1)} />
-  <Button title="Increment" onPress={() => setCount(count - 1)} />
 </View>
 ```
-
-The `pressed` state in our style allows us to show visual feedback when the user touches the button. We also prevent the counter from going below zero using `Math.max(0, prev - 1)`.
 
 <div style={{ 
   padding: '20px', 
@@ -146,20 +137,26 @@ The `pressed` state in our style allows us to show visual feedback when the user
   boxShadow: '0 2px 4px rgba(0,0,0,0.05)'
 }}>
 
-### 🎯 Task: Add a Reset Button
+### 🎯 Tâche
 
-Create a new button that:
+Créez un bouton de decrementation qui :
 
-- Resets the counter to 0 when pressed
-- Uses the `Pressable` component
+- Décrémente le compteur lorsqu'il est pressé
+- Utilise le composant `Pressable`
+- Utilise `Math.max(0, prev - 1)` pour éviter que le compteur soit négatif
+
+Créez un bouton de réinitialisation qui :
+
+- Réinitialise le compteur à 0 lorsqu'il est pressé
+- Utilise le composant `Pressable`
 
 </div>
 
-## Step 4: Style the App
+## 🎨 Étape 4 : Appliquer des styles à l'application
 
-Let's make our app look beautiful by adding styles step by step:
+Ajoutons des styles à notre application étape par étape :
 
-At this point, your code should look like this:
+À ce stade, votre code devrait ressembler à ceci :
 
 ```tsx
 export default function Page() {
@@ -173,9 +170,7 @@ export default function Page() {
       <View>
         <Text>{count}</Text>
         <View>
-          <Pressable onPress={() => setCount((prev) => Math.max(prev - 1, 0))}>
-            <Text>-</Text>
-          </Pressable>
+          ...
           <Pressable onPress={() => setCount((prev) => prev + 1)}>
             <Text>+</Text>
           </Pressable>
@@ -187,7 +182,7 @@ export default function Page() {
 }
 ```
 
-To add we simply need to create a const styles object and add the styles to the components.
+Pour ajouter des styles, nous devons simplement créer une constante `styles` et ajouter les styles aux composants.
 
 ```tsx
 const styles = StyleSheet.create({
@@ -250,30 +245,30 @@ const styles = StyleSheet.create({
 });
 ```
 
-In React Native, you can combine multiple styles using an array. This is useful when you want to:
+En React Native, vous pouvez combiner plusieurs styles en utilisant un tableau. Ceci est utile lorsque vous souhaitez :
 
-- Apply base styles and variations
-- Add conditional styles
-- Override specific properties
+- Appliquer des styles de base et des variations
+- Ajouter des styles conditionnels
+- Remplacer des propriétés spécifiques
 
-Here's how to combine styles:
+Voici comment combiner des styles :
 
 ```tsx
-// Basic style application
+// Style de base application
 <View style={styles.button}>
   <Text>Basic Button</Text>
 </View>
 
-// Combining two styles
+// Combinaison de deux styles
 <View style={[styles.button, styles.incrementButton]}>
   <Text>Combined Styles</Text>
 </View>
 ```
 
-In our counter app, we use this to create different button variations:
+Dans notre application de compteur, nous utilisons ceci pour créer différentes variations de boutons :
 
 ```tsx
-// Decrement button (red)
+// Bouton de decrementation (rouge)
 <Pressable style={styles.button}>
   <Text>-</Text>
 </Pressable>
@@ -284,7 +279,7 @@ In our counter app, we use this to create different button variations:
 </Pressable>
 ```
 
-The second style in the array will override any duplicate properties from the first style.
+Le second style dans le tableau remplacera les propriétés en double du premier style.
 
 <div style={{ 
   padding: '20px', 
@@ -296,11 +291,11 @@ The second style in the array will override any duplicate properties from the fi
   boxShadow: '0 2px 4px rgba(0,0,0,0.05)'
 }}>
 
-### 🎯 Try it yourself!
+### 🎯 Essayez-vous-même !
 
-1. Add the styles to the correct components
-2. Create a new button variation with a different color
-3. Try combining three or more styles
-4. Create a selected state for buttons
+1. Ajoutez les styles aux composants corrects
+2. Créez une nouvelle variation de bouton avec une couleur différente
+3. Essayez de combiner trois ou plus de styles
+4. Créez un état sélectionné pour les boutons
 
 </div>
