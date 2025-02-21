@@ -1,28 +1,55 @@
 ---
 sidebar_position: 1
+title: "Introduction"
 ---
 
-# React Native Workshop
+# TP React Native
 
-## Workshop Structure
+## 📱 Introduction
 
-This workshop is divided into progressive exercises:
+Bienvenue dans ce TP de React Native ! Vous allez apprendre à créer des applications mobiles natives en utilisant vos connaissances en React. Ce TP vous guidera à travers plusieurs exercices pratiques, du plus simple au plus complexe.
 
-1. **Exercise 1**: Creating Your First App
+## 🎯 Objectifs
 
-   - Learn to set up a React Native project
-   - Understand basic components
-   - Create a simple UI
+À la fin de ce TP, vous serez capable de créer des applications mobiles complètes avec React Native. Vous maîtriserez :
 
-2. **Exercise 2**: Navigation (builds on Exercise 1)
-   - Starting code provided in exercises/exercise-2
-   - Add multiple screens
-   - Implement navigation
+| Compétence    | Description                                    |
+| ------------- | ---------------------------------------------- |
+| 🛠️ Setup      | Configuration de l'environnement et des outils |
+| 📱 UI         | Création d'interfaces utilisateur natives      |
+| 🧩 Components | Création et réutilisation de composants        |
+| 🔄 État       | Gestion de l'état avec useState                |
+| 🌐 API        | Interaction avec des services externes         |
+| 🔐 Auth       | Implémentation de l'authentification           |
 
-[Additional exercises...]
+## 📚 Structure du TP
 
-## How to Follow This Workshop
+Le TP est divisé en exercices progressifs :
 
-1. Start with Exercise 1 by creating your own project
-2. For subsequent exercises, use the provided starter code in the exercises directory
-3. Each exercise builds upon the concepts learned in previous exercises
+### 🚀 Exercice 0 : Lancement de l'application
+
+Dans ce premier exercice, vous découvrirez l'environnement React Native. Vous apprendrez à configurer votre espace de travail, installer Expo Go sur votre téléphone et créer votre première application mobile.
+
+### 🔢 Exercice 1 : Application Counter
+
+Commencez par une application simple pour comprendre les bases de React Native. Vous créerez un compteur interactif qui vous permettra de maîtriser la gestion d'état avec useState et les interactions utilisateur de base.
+
+### ✅ Exercice 2 : Application Todo List
+
+Passez à un niveau supérieur avec une application de gestion de tâches. Vous apprendrez à gérer une liste d'éléments, utiliser le stockage local et implémenter les opérations CRUD (Create, Read, Update, Delete).
+
+### 🌟 Exercice 3 : DevHub
+
+Dans cet exercice final, vous créerez une application complète qui interagit avec l'API GitHub. Vous implémenterez l'authentification avec Supabase, créerez une interface moderne et gérerez la navigation entre différents écrans.
+
+## 🛠️ Prérequis
+
+Pour suivre ce TP, vous aurez besoin de :
+
+- **Node.js** installé sur votre machine
+- **VS Code** ou un autre éditeur de code
+- **Smartphone** avec Expo Go installé
+
+## 🚀 Commençons !
+
+Choisissez un exercice dans le menu de gauche pour commencer. Bon développement !

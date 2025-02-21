@@ -1,25 +1,25 @@
 ---
 sidebar_position: 2
+title: "Prérequis"
 ---
 
-# Prerequisites
+# Prérequis
 
-Before getting into the exercises, ensure you have the following tools and software installed on your machine.
+Avant de commencer les exercices, assurez-vous d'avoir installé les outils et logiciels suivants sur votre machine.
 
-## Required Software
+## Logiciels requis
 
 ### Node.js
 
-- Install Node.js LTS version (16.x or higher)
-- Verify installation:
+Vérifiez que vous avez bien la version 22.14.0 ou une version supérieure installée:
 
 ```bash
 node -v
 ```
 
-If you don't have Node.js installed, you can download it from [here](https://nodejs.org/fr/download). I recommend installing using nvm. nvm is a tool that allows you to install and manage different versions of Node.js. For this workshop, we will use Node.js 22.14.0.
+Si vous n'avez pas Node.js installé, vous pouvez le télécharger [ici](https://nodejs.org/fr/download). Je recommande d'installer `nvm` (Node Version Manager). `nvm` est un outil qui vous permet d'installer et de gérer différentes versions de Node.js. Pour ce workshop, nous utiliserons la version 22.14.0.
 
-If you already have nvm installed, you can install with:
+Si vous avez déjà nvm installé, vous pouvez l'installer avec:
 
 ```bash
 nvm install 22.14.0
@@ -27,13 +27,14 @@ nvm install 22.14.0
 
 ### Git
 
-- Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-- Verify installation:
+Assurez-vous d'avoir Git installé. Si ce n'est pas le cas, vous pouvez l'installer [ici](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
 ```bash
 git --version
 ```
 
-### React Native Development Environment
+### Environnement de développement React Native
 
-Depending on your OS, you will need to install different tools. Follow the instructions [here](https://docs.expo.dev/get-started/set-up-your-environment/).
+En fonction de votre système d'exploitation, vous devrez installer différents outils. Suivez les instructions [ici](https://docs.expo.dev/get-started/set-up-your-environment/).
+
+Pour ce workshop, nous utiliserons Expo. Installez l'application Expo Go sur votre téléphone.

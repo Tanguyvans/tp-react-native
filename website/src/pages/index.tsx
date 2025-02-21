@@ -1,39 +1,37 @@
-import type {ReactNode} from 'react';
 import clsx from 'clsx';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
-
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
+    <div className={styles.heroBanner}>
+      <div className={styles.container}>
+        <Heading as="h1" className={styles.title}>
+          React Native
         </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className={styles.subtitle}>
+          Développez des applications mobiles modernes
+        </p>
         <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/prerequisites">
-            Start Workshop 🚀
-          </Link>
+          <a
+            className={styles.button}
+            href="/tp-react-native/docs/intro">
+            Commencer le TP
+          </a>
         </div>
       </div>
-    </header>
+    </div>
   );
 }
 
-export default function Home(): ReactNode {
+export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Welcome to ${siteConfig.title}`}
-      description="Learn React Native through hands-on exercises and practical examples">
+      title={siteConfig.title}
+      description="TP React Native - UMONS">
       <HomepageHeader />
     </Layout>
   );
